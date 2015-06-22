@@ -1,27 +1,36 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!doctype html>
+<html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Mordecai by caerusassociates</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <section class="page-header">
-      <h1 class="project-name">Mordecai</h1>
-      <h2 class="project-tagline">Full text geocoding software.</h2>
-      <a href="https://github.com/caerusassociates/mordecai" class="btn">View on GitHub</a>
-      <a href="https://github.com/caerusassociates/mordecai/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/caerusassociates/mordecai/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <div class="wrapper">
+      <header>
+        <h1>Mordecai</h1>
+        <p>Full text geocoding software.</p>
 
-    <section class="main-content">
-      <p><img src="http://caerusassociates.com/wp-content/uploads/2012/03/Caerus_logo.png" alt="http://caerusassociates.com/wp-content/uploads/2012/03/Caerus_logo.png"></p>
+        <p class="view"><a href="https://github.com/caerusassociates/mordecai">View the Project on GitHub <small>caerusassociates/mordecai</small></a></p>
 
-<p>Mordecai is a new, automated document geocoding system, built by Caerus Associates, with global coverage that seeks to improve on existing geocoding approaches in three ways: improved accuracy, ability to limit searches to a defined country or region, and ease of switching out named entity recognition services. Mordecai runs as a web service, exposing two endpoints: <code>/country</code>, for determining the country focus of a piece of text, and <code>/places</code>, for returning latitude and longitude for each individual place mentioned in the text.</p>
+
+        <ul>
+          <li><a href="https://github.com/caerusassociates/mordecai/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/caerusassociates/mordecai/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/caerusassociates/mordecai">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p><img src="http://caerusassociates.com/wp-content/uploads/2012/03/Caerus_logo.png" alt="http://caerusassociates.com/wp-content/uploads/2012/03/Caerus_logo.png"></p>
+
+<p>Mordecai is a new, automated document geocoding system built by Caerus Associates. Mordecai has global coverage that seeks to improve on existing geocoding approaches in three ways: improved accuracy, ability to limit searches to a defined country or region, and ease of switching out named entity recognition services. Mordecai runs as a web service, exposing two endpoints: <code>/country</code>, for determining the country focus of a piece of text, and <code>/places</code>, for returning latitude and longitude for each individual place mentioned in the text.</p>
 
 <p>At its most basic, automated geocoding of text is made up of three steps:</p>
 
@@ -39,7 +48,7 @@
 <p>The first step in any geocoding pipeline is to extract place name words from text. For this task, Mordecai uses MIT Lincoln Labs’s MITIE, a fast and accurate XDATA-funded named entity recognition (NER) system. MITIE comes with a model trained on a large corpus of news text. Mordecai uses the pre-trained model, though training a custom model for non-standard text is straightforward and something we have done in other applications. Our MITIE wrapper returns a list of labeled entities (people, locations, organizations, and miscellaneous) and a bag of "context" words occurring on either side of each extracted entity.</p>
 
 <h2>
-<a id="step-2-establishing-the-country-with-the-country-endpoint" class="anchor" href="#step-2-establishing-the-country-with-the-country-endpoint" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 2: Establishing the country with the /country endpoint</h2>
+<a id="step-2-establishing-the-country-with-the-country-endpoint" class="anchor" href="#step-2-establishing-the-country-with-the-country-endpoint" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 2: Establishing the country with the <code>/country</code> endpoint</h2>
 
 <p>Taken in isolation, a place name like "Prague" could be resolved to several places. Searching a place name gazetteer like Geonames.org, which Mordecai uses, finds both the obvious (Prague, Czech Republic) and the obscure (Prague, Oklahoma). A naïve approach might take all of the place names mentioned in the text, find all the countries that have a location with that name, and sum the "votes" for each country. However, that approach is enormously skewed toward large, connected, English speaking countries, resulting in the bias toward the United States observed in other geocoding systems.</p>
 
@@ -94,16 +103,13 @@ the capital Kathmandu, seven bodies including of that of a German trekker
 <li>word2vec: <a href="https://code.google.com/p/word2vec/">https://code.google.com/p/word2vec/</a>
 </li>
 </ul>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/caerusassociates/mordecai">Mordecai</a> is maintained by <a href="https://github.com/caerusassociates">caerusassociates</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/caerusassociates">caerusassociates</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
-
-    </section>
-
-  
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
   </body>
 </html>
-
