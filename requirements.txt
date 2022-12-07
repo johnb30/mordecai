@@ -2,7 +2,7 @@ aniso8601==1.0.0
 backports.ssl-match-hostname==3.4.0.2
 boto==2.38.0
 bz2file==0.98
-certifi==2015.4.28
+certifi==2022.12.7
 elasticsearch==1.6.0
 elasticsearch-dsl==0.0.4
 numpy==1.9.2
